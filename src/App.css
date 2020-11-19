@@ -3,35 +3,63 @@
 }
 
 body {
-    width: 1100px;
-    margin: 0 auto
+    background-color: #fafbfc;
+}
+
+.content-wrapper {
+    max-width: 65%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #24292e;
+    height: 100px;
 }
 
 header img {
-    width: 200px;
+    height: 100px;
+    width: auto;
+    padding: 10px 30px;
+    background-color: #fafbfc;
+}
+
+h2 {
+    font-size: 45px;
+    padding: 30px 0;
+}
+
+.page {
+    padding: 30px 0;
+}
+
+.cars-page {
+    background-color: #eef3f7;
 }
 
 .cars-table {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .car {
-    background-color: #f5f1f1;
-    margin: 15px;
-    border: 1px solid #c6c6c6;
-    border-radius: 4px;
+    background-color: #f9f9f9;
+    margin-top: 30px;
+    margin-right: 30px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: stretch;
-    flex-basis: 25%;
+    width: 275px;
     justify-content: space-between;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .2);
 }
 
 .car:hover {
-    background-color: #e8e6e6;
+    background-color: #f1f1f1;
 }
 
 .car .img-wrapper {
@@ -54,15 +82,26 @@ a.car {
 }
 
 .car .title {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(96, 182, 201);
     flex-grow: 3;
 }
 
 .car .price {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    font-style: italic;
+}
+
+.car .price span {
+    text-align: right;
+    padding: 15px;
+    color: #f9f9f9;
+    background-color: rgb(96, 182, 201);
 }
 
 .car .items {
@@ -80,22 +119,33 @@ a.car {
 .pagination {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin: 10px 0;
+    justify-content: right;
+    margin-right: 30px;
     align-items: baseline;
     font-weight: bold;
 }
 
 .pagination .page-item {
     padding: 8px 15px;
-    margin: 0 5px;
     color: rgb(96, 182, 201);
     font-size: 17px;
     border: none;
     cursor: pointer;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .2);
+    font-weight: bold;
+}
+
+.pagination .pagination-items {
+    margin: 0 5px;
 }
 
 .pagination .page-item.active {
     background-color: rgb(96, 182, 201);
     color: white;
+    box-shadow: none;
+}
+
+#map {
+    width: 100%;
+    height: 600px;
 }

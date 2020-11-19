@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 import Cars from './pages/cars/Cars';
 import Contact from './pages/Contact';
@@ -9,7 +9,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div className="content-wrapper">
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
       </header>
       <About></About>
       <SalesForm></SalesForm>

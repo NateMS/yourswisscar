@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
 class About extends Component {
-  handleClick = () => {
-
-  };
-
   render() {
     return (
-        <div>
-            <h1>über yourswisscar.com</h1>
+        <div className="page page-about">
+            <div className="content-wrapper">  
+                <h2>Your SwissCar GmbH</h2>
+            </div>
         </div>
     );
   }

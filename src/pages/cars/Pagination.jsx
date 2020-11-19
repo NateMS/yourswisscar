@@ -22,11 +22,13 @@ class Pagination extends Component {
         return (
             <div className="pagination">
                 <div>Seiten</div>
-                 {this.state.pages.map((page) =>
-                    <button onClick={() => this.handleClick(page)} className={`page-item${ this.props.currentPage === page ? ' active' : ''}`}>
-                        {page}
-                    </button>
-                )}
+                <div className="pagination-items">
+                    {this.state.pages.map((page) =>
+                        <button onClick={() => this.handleClick(page)} className={`page-item${ this.props.currentPage === page ? ' active' : ''}`}>
+                            {page}
+                        </button>
+                    )}
+                </div>
             </div>
         );
     }

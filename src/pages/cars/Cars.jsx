@@ -24,8 +24,8 @@ class Cars extends Component {
   }
 
   async setDataFromApi(page) {
-      // const response = await fetch('https://www.autosccout24.ch/webapp/v92/infopage/vehicles/2093798?page=' + this.state.currentPage);
-      // const data = await response.json();
+      //const response = await fetch('https://www.autoscout24.ch/webapp/v92/infopage/vehicles/2093798?page=' + this.state.currentPage);
+      //const data = await response.json();
       this.setState({
         cars: data.vehicles.items,
         count: data.count,
@@ -43,11 +43,13 @@ class Cars extends Component {
 
   render() {
     return (
-      <div>
-         <h2>{this.state.count} Autos im Angebot</h2>
-        <Pagination changePage={this.changePage} currentPage={this.state.currentPage} totalItems={this.state.count} itemsPerPage={this.state.itemsPerPage}></Pagination>
-          <CarsTable cars={this.state.cars} total={this.state.count}></CarsTable>
-          <Pagination changePage={this.changePage} currentPage={this.state.currentPage} totalItems={this.state.count} itemsPerPage={this.state.itemsPerPage}></Pagination>
+      <div className="page cars-page">
+        <div class="content-wrapper">
+            <h2>{this.state.count} Autos im Angebot</h2>
+            <Pagination changePage={this.changePage} currentPage={this.state.currentPage} totalItems={this.state.count} itemsPerPage={this.state.itemsPerPage}></Pagination>
+            <CarsTable cars={this.state.cars} total={this.state.count}></CarsTable>
+            <Pagination changePage={this.changePage} currentPage={this.state.currentPage} totalItems={this.state.count} itemsPerPage={this.state.itemsPerPage}></Pagination>
+        </div>
       </div>
     );
   }

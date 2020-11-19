@@ -19,17 +19,21 @@ class SaleForm extends Component {
 
   render() {
     return (
-        <form onSubmit={this.handleSubmit}>
-            <div className="form-item">
-                <label for="name">Name</label>
-                <input type="text" name="name" value={this.state.value} onChange={this.handleChange} />
+        <div className="page page-sales-form">
+            <div className="content-wrapper">  
+                <form onSubmit={this.handleSubmit}>
+                    <div className="form-item">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" value={this.state.value} onChange={this.handleChange} />
+                    </div>
+                    <div className="form-item">
+                        <label for="email">E-Mail</label>
+                        <input type="email" name="email" value={this.state.value} onChange={this.handleChange}  />
+                    </div>
+                    <input type="submit" value="Submit" />
+                </form>
             </div>
-            <div className="form-item">
-                <label for="email">E-Mail</label>
-                <input type="email" name="email" value={this.state.value} onChange={this.handleChange}  />
-            </div>
-            <input type="submit" value="Submit" />
-      </form>
+        </div>
     );
   }
 }
