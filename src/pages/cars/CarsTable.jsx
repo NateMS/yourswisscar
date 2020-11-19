@@ -7,7 +7,7 @@ class CarsTable extends Component {
       content = <p>Keine Autos gefunden</p>;
     } else {
       content = 
-        <div className="cars-table">
+        <div id="cars-table" className="cars-table">
           {this.props.cars.map((car) =>
             <Car key={car.id} car={car}></Car>
           )}

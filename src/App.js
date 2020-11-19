@@ -1,5 +1,6 @@
-import logo from './logo.png';
 import './App.css';
+import Header from './pages/Header';
+import Footer from './pages/Footer';
 import Cars from './pages/cars/Cars';
 import Contact from './pages/Contact';
 import SalesForm from './pages/SaleForm';
@@ -8,15 +9,12 @@ import About from './pages/About';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="content-wrapper">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-      </header>
+      <Header></Header>
       <About></About>
       <SalesForm></SalesForm>
       <Cars></Cars>
       <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 }

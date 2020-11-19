@@ -11,7 +11,6 @@ import {Vector as VectorLayer} from 'ol/layer';
 import {Icon, Style} from 'ol/style';
 import locationIcon from '../data/location.png';
 
-  // [47.400886, 8.460047]
 class MapView extends Component {
     async componentDidMount() {
         let point = transform([8.4600236, 47.4006055], 'EPSG:4326', 'EPSG:3857');
