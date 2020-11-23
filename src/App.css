@@ -88,8 +88,9 @@ header h1 {
 }
 
 .navigation-wrapper nav ul li a:hover {
-    border-bottom: 2px solid rgb(96, 182, 201);
-    color: rgb(96, 182, 201);
+    /* border-bottom: 2px solid #7e1a13; */
+    text-decoration: underline;
+    color: #7e1a13;
     transition: all 0.3s;
 }
 
@@ -131,7 +132,8 @@ header h1 {
     left: 0;
     width: 100%;
     height: 90px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #fafbfc;
+    box-shadow: 0 1px 10px 3px rgba(0, 0, 0, 0.15);
 }
 
 .sticky+.content-wrapper {
@@ -209,7 +211,7 @@ a.car {
 .car .title {
     font-size: 20px;
     font-weight: bold;
-    color: rgb(96, 182, 201);
+    color: #7e1a13;
     flex-grow: 3;
 }
 
@@ -226,7 +228,7 @@ a.car {
     text-align: right;
     padding: 15px;
     color: #f9f9f9;
-    background-color: rgb(96, 182, 201);
+    background-color: #7e1a13;
 }
 
 .car .items {
@@ -252,7 +254,7 @@ a.car {
 
 .pagination .page-item {
     padding: 8px 15px;
-    color: rgb(96, 182, 201);
+    color: #7e1a13;
     font-size: 17px;
     border: none;
     cursor: pointer;
@@ -265,7 +267,7 @@ a.car {
 }
 
 .pagination .page-item.active {
-    background-color: rgb(96, 182, 201);
+    background-color: #7e1a13;
     color: white;
     box-shadow: none;
 }
@@ -329,11 +331,20 @@ a.car {
     width: 85%;
 }
 
+.gotcha {
+    display: none;
+}
+
 .submit {
     color: #f9f9f9;
-    background-color: rgb(96, 182, 201);
+    background-color: #7e1a13;
     border: none;
     margin: 0;
     padding: 13px 28px;
     font-size: 18px;
+    cursor: pointer;
+}
+
+.form-item ::placeholder {
+    color: #a6a6a6;
 }

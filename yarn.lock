@@ -1063,6 +1063,22 @@
     "minimatch" "^3.0.4"
     "strip-json-comments" "^3.1.1"
 
+"@formspree/core@^2.6.1":
+  "integrity" "sha512-cbaNhWQ4BFZWosh1Oa4pKD3CWAK3sn+nK3D1UQj6hO1O+AUH502OabKo5+ugC/P2+d4YZLadIY3mC11Ig4kEzA=="
+  "resolved" "https://registry.npmjs.org/@formspree/core/-/core-2.6.2.tgz"
+  "version" "2.6.2"
+  dependencies:
+    "@types/promise-polyfill" "^6.0.3"
+    "fetch-ponyfill" "^6.1.0"
+    "promise-polyfill" "^8.1.3"
+
+"@formspree/react@^2.2.3":
+  "integrity" "sha512-paiDNr0lsf3XwNiV8SrYQGXdSN471c9boFLesqxM01VimCgA0MwZbyo46cDxWO7ZML6FsuKUOvdjnRguSHFkow=="
+  "resolved" "https://registry.npmjs.org/@formspree/react/-/react-2.2.3.tgz"
+  "version" "2.2.3"
+  dependencies:
+    "@formspree/core" "^2.6.1"
+
 "@hapi/address@2.x.x":
   "integrity" "sha512-QD1PhQk+s31P1ixsX0H0Suoupp3VMXzIVMSwobR3F3MSUO2YCV0B7xqLcUw/Bh8yuvd3LhpyqLQWTNcRmp6IdQ=="
   "resolved" "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz"
@@ -1701,6 +1717,11 @@
   "integrity" "sha512-UEyp8LwZ4Dg30kVU2Q3amHHyTn1jEdhCIE59ANed76GaT1Vp76DD3ZWSAxgCrw6wJ0TqeoBpqmfUHiUDPs//HQ=="
   "resolved" "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.1.5.tgz"
   "version" "2.1.5"
+
+"@types/promise-polyfill@^6.0.3":
+  "integrity" "sha512-f/BFgF9a+cgsMseC7rpv9+9TAE3YNjhfYrtwCo/pIeCDDfQtE6PY0b5bao2eIIEpZCBUy8Y5ToXd4ObjPSJuFw=="
+  "resolved" "https://registry.npmjs.org/@types/promise-polyfill/-/promise-polyfill-6.0.3.tgz"
+  "version" "6.0.3"
 
 "@types/q@^1.5.1":
   "integrity" "sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug=="
@@ -4958,6 +4979,13 @@
   dependencies:
     "bser" "2.1.1"
 
+"fetch-ponyfill@^6.1.0":
+  "integrity" "sha512-rWLgTr5A44/XhvCQPYj0X9Tc+cjUaHofSM4lcwjc9MavD5lkjIhJ+h8JQlavPlTIgDpwhuRozaIykBvX9ItaSA=="
+  "resolved" "https://registry.npmjs.org/fetch-ponyfill/-/fetch-ponyfill-6.1.1.tgz"
+  "version" "6.1.1"
+  dependencies:
+    "node-fetch" "~2.6.0"
+
 "figgy-pudding@^3.5.1":
   "integrity" "sha512-0btnI/H8f2pavGMN8w40mlSKOfTK2SVJmBfBeVIj3kNw0swwgzyRq0d5TJVOwodFmtvpPeWPN/MCcfuWF0Ezbw=="
   "resolved" "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz"
@@ -7593,6 +7621,11 @@
     "lower-case" "^2.0.1"
     "tslib" "^1.10.0"
 
+"node-fetch@~2.6.0":
+  "integrity" "sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw=="
+  "resolved" "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.1.tgz"
+  "version" "2.6.1"
+
 "node-forge@^0.10.0":
   "integrity" "sha512-PPmu8eEeG9saEUvI97fm4OYxXVB6bFvyNTyiUOBichBpFG8A1Ljw3bY62+5oOjDEMHRnd0Y7HQ+x7uzxOzC6JA=="
   "resolved" "https://registry.yarnpkg.com/node-forge/-/node-forge-0.10.0.tgz"
@@ -9043,6 +9076,11 @@
   "resolved" "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz"
   "version" "1.0.1"
 
+"promise-polyfill@^8.1.3":
+  "integrity" "sha512-k/TC0mIcPVF6yHhUvwAp7cvL6I2fFV7TzF1DuGPI8mBh4QQazf36xCKEHKTZKRysEoTQoQdKyP25J8MPJp7j5g=="
+  "resolved" "https://registry.npmjs.org/promise-polyfill/-/promise-polyfill-8.2.0.tgz"
+  "version" "8.2.0"
+
 "promise@^8.1.0":
   "integrity" "sha512-W04AqnILOL/sPRXziNicCjSNRruLAuIHEOVBazepu0545DDNGYHz7ar9ZgZ1fMU8/MA4mVxp5rkBWRi6OXIy3Q=="
   "resolved" "https://registry.yarnpkg.com/promise/-/promise-8.1.0.tgz"
@@ -9366,7 +9404,7 @@
   optionalDependencies:
     "fsevents" "^2.1.3"
 
-"react@*", "react@^17.0.1", "react@17.0.1":
+"react@*", "react@^17.0.1", "react@>= 16.8.0", "react@17.0.1":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz"
   "version" "17.0.1"

@@ -1,49 +1,74 @@
 import React, { Component } from 'react';
+import { ValidationError } from '@formspree/react';
 
 class SaleForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {name: '', email: '', value: ''};
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-    
-    handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
-        event.preventDefault();
+        this.submitForm = this.submitForm.bind(this);
+        this.state = {
+            status: ""
+        };
     }
 
+    submitForm(ev) {
+        ev.preventDefault();
+        const form = ev.target;
+        const data = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            form.reset();
+            this.setState({ status: "SUCCESS" });
+          } else {
+            this.setState({ status: "ERROR" });
+          }
+        };
+        xhr.send(data);
+      }
+
   render() {
+    const { status } = this.state;
+
+    if (status === "SUCCESS") {
+        return (
+            <div className="page page-sales-form">
+                <div id="page-sales-form" class="anchor"></div>
+                <div className="content-wrapper">
+                    <p className="form-success">Besten Dank für Ihre Anfrage! Wir werden die Anfrage so schnell wie möglich bearbeiten.</p>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="page page-sales-form">
             <div id="page-sales-form" class="anchor"></div>
             <div className="content-wrapper">
                 <h2>Ankauf</h2>
                 <p>Sie möchten Ihr Fahrzeug verkaufen? Füllen Sie dazu das Formular mit den Informationen über Ihr Fahrzeug aus.<br/>Wir melden uns bei Ihnen.</p>
-                <form onSubmit={this.handleSubmit}>
+                <form action="https://formspree.io/f/mqkgdzle" method="POST" onSubmit={this.submitForm}>
                     <div className="form-wrapper">
                         <div className="form-fieldset">
                             <legend>Kontaktangaben</legend>
                             <div className="form-items">
                                 <div className="form-item">
-                                    <label for="firstname">Vorname</label>
-                                    <input type="text" name="firstname" value={this.state.value} onChange={this.handleChange} />
+                                    <label htmlFor="Vorname">Vorname</label>
+                                    <input type="text" name="Vorname" required/>
                                 </div>
                                 <div className="form-item">
-                                    <label for="lastname">Nachname</label>
-                                    <input type="text" name="lastname" value={this.state.value} onChange={this.handleChange} />
+                                    <label htmlFor="Nachname">Nachname</label>
+                                    <input type="text" name="Nachname" required/>
                                 </div>
                                 <div className="form-item">
-                                    <label for="email">E-Mail</label>
-                                    <input type="email" name="email" value={this.state.value} onChange={this.handleChange}  />
+                                    <label htmlFor="_replyto">E-Mail</label>
+                                    <input type="email" name="_replyto" placeholder="email@domain.com" required/>
                                 </div>
                                 <div className="form-item">
-                                    <label for="phone">Telefon</label>
-                                    <input type="phone" name="phone" value={this.state.value} onChange={this.handleChange}  />
+                                    <label htmlFor="phone">Telefon</label>
+                                    <input type="phone" name="Telefon" placeholder="+41 xx xxx xx xx"/>
                                 </div>
                             </div>
                         </div>
@@ -51,33 +76,36 @@ class SaleForm extends Component {
                             <legend>Informationen über das Fahrzeug</legend>
                             <div className="form-items">
                                 <div className="form-item">
-                                    <label for="brand">Marke</label>
-                                    <input type="text" name="brand" value={this.state.value} onChange={this.handleChange} />
+                                    <label htmlFor="Marke">Marke</label>
+                                    <input type="text" name="Marke" placeholder="z.B. VW" required/>
                                 </div>
                                 <div className="form-item">
-                                    <label for="model">Model</label>
-                                    <input type="text" name="model" value={this.state.value} onChange={this.handleChange} />
+                                    <label htmlFor="Modell">Modell</label>
+                                    <input type="text" name="Modell"  placeholder="z.B. Golf GTI" required/>
                                 </div>
                                 <div className="form-item">
-                                    <label for="mileage">Kilometerstand</label>
-                                    <input type="text" name="mileage" value={this.state.value} onChange={this.handleChange}  />
+                                    <label htmlFor="Kilometerstand">Kilometerstand</label>
+                                    <input type="text" name="Kilometerstand" placeholder="100'000"/>
                                 </div>
                                 <div className="form-item">
-                                    <label for="age">Erste Inverkehrssetzung</label>
-                                    <input type="text" name="age" value={this.state.value} onChange={this.handleChange}  />
+                                    <label htmlFor="Erste Inverkehrssetzung">Erste Inverkehrssetzung</label>
+                                    <input type="text" name="Erste Inverkehrssetzung" placeholder="z.B. 01.05.2015"/>
                                 </div>
                                 <div className="form-item">
-                                    <label for="price">Gewünschter Preis</label>
-                                    <input type="text" name="price" value={this.state.value} onChange={this.handleChange}  />
+                                    <label htmlFor="Gewünschter Preis">Gewünschter Preis (CHF)</label>
+                                    <input type="text" name="Gewünschter Preis" placeholder="15'000.-" required/>
                                 </div>
                                 <div className="form-item form-item-textarea">
-                                    <label for="message">Mitteilung / Bemerkung</label>
-                                    <textarea name="message" id="message" onChange={this.handleChange}>{this.state.value}</textarea>
+                                    <label htmlFor="Mitteilung / Bemerkung">Mitteilung / Bemerkung</label>
+                                    <textarea name="Mitteilung / Bemerkung" id="message"></textarea>
                                 </div>
+                                <input type="text" className="gotcha" name="_gotcha" />
+                                <input type="hidden" name="_subject" value="Neue Anfrage für Autoankauf" />
                             </div>
                         </div>
-                    </div>                    
-                    <input class="submit" type="submit" value="Anfrage Senden" />
+                    </div>
+                    <button type="submit" class="submit">Anfrage Senden</button>
+                    {status === "ERROR" && <p class="form-error">Ooops! Das Formular konnte leider nicht abgesendet werden. Versuchen Sie es bitte erneut oder senden Sie uns eine E-Mail.</p>}
                 </form>
             </div>
         </div>
