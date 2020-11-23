@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.3ff3cb91.chunk.css",
-    "main.js": "/static/js/main.67018cea.chunk.js",
-    "main.js.map": "/static/js/main.67018cea.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.39b3a4ed.js",
-    "runtime-main.js.map": "/static/js/runtime-main.39b3a4ed.js.map",
-    "static/js/2.77135f9c.chunk.js": "/static/js/2.77135f9c.chunk.js",
-    "static/js/2.77135f9c.chunk.js.map": "/static/js/2.77135f9c.chunk.js.map",
-    "static/js/3.f4ac6d24.chunk.js": "/static/js/3.f4ac6d24.chunk.js",
-    "static/js/3.f4ac6d24.chunk.js.map": "/static/js/3.f4ac6d24.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.3ff3cb91.chunk.css.map": "/static/css/main.3ff3cb91.chunk.css.map",
-    "static/js/2.77135f9c.chunk.js.LICENSE.txt": "/static/js/2.77135f9c.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/header_bg.01c0ae34.jpg",
-    "static/media/logo.87238be1.png": "/static/media/logo.87238be1.png"
+    "main.css": "/yourswisscar/static/css/main.2d4389c4.chunk.css",
+    "main.js": "/yourswisscar/static/js/main.fc32e231.chunk.js",
+    "main.js.map": "/yourswisscar/static/js/main.fc32e231.chunk.js.map",
+    "runtime-main.js": "/yourswisscar/static/js/runtime-main.807c800d.js",
+    "runtime-main.js.map": "/yourswisscar/static/js/runtime-main.807c800d.js.map",
+    "static/js/2.4279f3c1.chunk.js": "/yourswisscar/static/js/2.4279f3c1.chunk.js",
+    "static/js/2.4279f3c1.chunk.js.map": "/yourswisscar/static/js/2.4279f3c1.chunk.js.map",
+    "static/js/3.43b45f5a.chunk.js": "/yourswisscar/static/js/3.43b45f5a.chunk.js",
+    "static/js/3.43b45f5a.chunk.js.map": "/yourswisscar/static/js/3.43b45f5a.chunk.js.map",
+    "index.html": "/yourswisscar/index.html",
+    "static/css/main.2d4389c4.chunk.css.map": "/yourswisscar/static/css/main.2d4389c4.chunk.css.map",
+    "static/js/2.4279f3c1.chunk.js.LICENSE.txt": "/yourswisscar/static/js/2.4279f3c1.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/yourswisscar/static/media/header_bg.01c0ae34.jpg",
+    "static/media/logo.87238be1.png": "/yourswisscar/static/media/logo.87238be1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.39b3a4ed.js",
-    "static/js/2.77135f9c.chunk.js",
-    "static/css/main.3ff3cb91.chunk.css",
-    "static/js/main.67018cea.chunk.js"
+    "static/js/runtime-main.807c800d.js",
+    "static/js/2.4279f3c1.chunk.js",
+    "static/css/main.2d4389c4.chunk.css",
+    "static/js/main.fc32e231.chunk.js"
   ]
 }
