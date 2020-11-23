@@ -20,6 +20,7 @@ class SaleForm extends Component {
   render() {
     return (
         <div className="page page-sales-form">
+            <div id="page-sales-form" class="anchor"></div>
             <div className="content-wrapper">
                 <h2>Ankauf</h2>
                 <p>Sie möchten Ihr Fahrzeug verkaufen? Füllen Sie dazu das Formular mit den Informationen über Ihr Fahrzeug aus.<br/>Wir melden uns bei Ihnen.</p>

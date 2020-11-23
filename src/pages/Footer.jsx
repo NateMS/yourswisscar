@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
         <footer>
             <div className="content-wrapper">
-                <p>erstellt durch Nadim Salloum</p>
+                <p>(2020) Design & Entwicklung von <a href="https://github.com/NateMS">Nadim Salloum</a></p>
             </div>
         </footer>
     );

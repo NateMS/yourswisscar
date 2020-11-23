@@ -2,8 +2,14 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #fafbfc;
+    margin: 0;
+    padding: 0;
 }
 
 .content-wrapper {
@@ -11,16 +17,130 @@ body {
     margin: 0 auto;
 }
 
-header {
-    background-color: #24292e;
-    height: 100px;
+.anchor {
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
 }
 
-header img {
-    height: 100px;
+header {
+    height: 70vh;
+    min-height: 500px;
+    margin: 0;
+    padding: 45px 100px;
+    background: url(data/header_bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header h1 {
+    padding: 50px 0;
+    font-size: 90px;
+    line-height: 220px;
+    text-align: center;
+}
+
+.navigation-wrapper {
+    margin: 0 auto;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    transition: all 0.4s;
+}
+
+.navigation-wrapper img {
+    height: 100%;
     width: auto;
-    padding: 10px 30px;
-    background-color: #fafbfc;
+    padding: 10px;
+}
+
+.navigation-wrapper nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.navigation-wrapper nav ul li {
+    margin: 0 10px;
+    padding: 0 20px;
+    width: auto;
+    text-align: center;
+    font-size: 26px;
+}
+
+.navigation-wrapper nav ul li a {
+    text-decoration: none;
+    color: #292929;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.navigation-wrapper nav ul li a:hover {
+    border-bottom: 2px solid rgb(96, 182, 201);
+    color: rgb(96, 182, 201);
+    transition: all 0.3s;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin-right: 55px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.opening-times {
+    display: flex;
+    flex-direction: column;
+    margin-right: 55px;
+}
+
+.opening-times .row .day {
+    min-width: 55px;
+    display: inline-block;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.sticky+.content-wrapper {
+    padding-top: 120px;
+}
+
+.sticky nav ul li {
+    height: 90px;
+    line-height: 90px;
 }
 
 h2 {
@@ -58,7 +178,7 @@ h2 {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: stretch;
-    width: 275px;
+    width: 30%;
     justify-content: space-between;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .2);
 }

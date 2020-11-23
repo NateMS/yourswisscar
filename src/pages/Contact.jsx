@@ -4,7 +4,8 @@ import MapView from './MapView'
 class Contact extends Component {
   render() {
     return (
-        <div className="page page-contact">
+        <div id="page-contact" className="page page-contact">
+            <div id="page-contact" class="anchor"></div>
             <div className="content-wrapper">  
                 <h2>Kontakt</h2>
                 <address>

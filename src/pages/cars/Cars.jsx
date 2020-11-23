@@ -39,11 +39,13 @@ class Cars extends Component {
   }
     this.setDataFromApi(page);
     this.setState({currentPage: page});
+    window.location.hash = "#page-cars";
   }
 
   render() {
     return (
       <div className="page cars-page">
+        <div id="page-cars" class="anchor"></div>
         <div class="content-wrapper">
             <h2>{this.state.count} Autos im Angebot</h2>
             <Pagination changePage={this.changePage} currentPage={this.state.currentPage} totalItems={this.state.count} itemsPerPage={this.state.itemsPerPage}></Pagination>
