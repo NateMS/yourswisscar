@@ -21,7 +21,21 @@ class Header extends Component {
             <header className="App-header">
                 <div className={`navigation-wrapper${ this.state.isTop ? '' : ' sticky'}`}>
                     <img src={logo} className="App-logo" alt="logo" />
-                    
+                    <div class="mobile-nav">
+                        <div id="menuToggle">
+                            <input type="checkbox"/>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <ul id="menu">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#page-sales-form">Ankauf</a></li>
+                                <li><a href="#page-cars">Unser Angebot</a></li>
+                                <li><a href="#page-contact">Kontakt</a></li>
+                            </ul>
+                        </div>
+                       
+                    </div>
                     <nav>
                         <ul>
                             <li><a href="#">Home</a></li>
