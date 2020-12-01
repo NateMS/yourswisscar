@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/yourswisscar/static/css/main.ea699c0c.chunk.css",
-    "main.js": "/yourswisscar/static/js/main.6b1b3dac.chunk.js",
-    "main.js.map": "/yourswisscar/static/js/main.6b1b3dac.chunk.js.map",
+    "main.css": "/yourswisscar/static/css/main.1d4d7a02.chunk.css",
+    "main.js": "/yourswisscar/static/js/main.f20e4558.chunk.js",
+    "main.js.map": "/yourswisscar/static/js/main.f20e4558.chunk.js.map",
     "runtime-main.js": "/yourswisscar/static/js/runtime-main.23b996bd.js",
     "runtime-main.js.map": "/yourswisscar/static/js/runtime-main.23b996bd.js.map",
     "static/js/2.d49924f6.chunk.js": "/yourswisscar/static/js/2.d49924f6.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.8abd0d4e.chunk.js": "/yourswisscar/static/js/3.8abd0d4e.chunk.js",
     "static/js/3.8abd0d4e.chunk.js.map": "/yourswisscar/static/js/3.8abd0d4e.chunk.js.map",
     "index.html": "/yourswisscar/index.html",
-    "static/css/main.ea699c0c.chunk.css.map": "/yourswisscar/static/css/main.ea699c0c.chunk.css.map",
+    "static/css/main.1d4d7a02.chunk.css.map": "/yourswisscar/static/css/main.1d4d7a02.chunk.css.map",
     "static/js/2.d49924f6.chunk.js.LICENSE.txt": "/yourswisscar/static/js/2.d49924f6.chunk.js.LICENSE.txt",
     "static/media/App.css": "/yourswisscar/static/media/header_bg.01c0ae34.jpg",
     "static/media/logo.87238be1.png": "/yourswisscar/static/media/logo.87238be1.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.23b996bd.js",
     "static/js/2.d49924f6.chunk.js",
-    "static/css/main.ea699c0c.chunk.css",
-    "static/js/main.6b1b3dac.chunk.js"
+    "static/css/main.1d4d7a02.chunk.css",
+    "static/js/main.f20e4558.chunk.js"
   ]
 }
