@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { ValidationError } from '@formspree/react';
 
 class SaleForm extends Component {
     constructor(props) {

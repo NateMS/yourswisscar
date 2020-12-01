@@ -24,6 +24,11 @@ body {
     visibility: hidden;
 }
 
+footer {
+    margin: 0;
+    padding: 1px 0 10px 0;
+}
+
 header {
     height: 70vh;
     min-height: 500px;
@@ -159,117 +164,10 @@ h2 {
     padding-bottom: 0;
 }
 
-.cars-page {
+.page-sales-form,
+.page-contact,
+footer {
     background-color: #eef3f7;
-}
-
-.cars-table {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.car {
-    background-color: #f9f9f9;
-    margin-top: 30px;
-    margin-right: 30px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: 30%;
-    justify-content: space-between;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .2);
-}
-
-.car:hover {
-    background-color: #f1f1f1;
-}
-
-.car .img-wrapper {
-    height: auto;
-    width: 100%;
-}
-
-.car img {
-    width: 100%;
-    height: 100%;
-}
-
-.car .content-item {
-    margin: 10px;
-}
-
-a.car {
-    text-decoration: none;
-    color: #292929;
-}
-
-.car .title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #7e1a13;
-    flex-grow: 3;
-}
-
-.car .price {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0;
-    display: flex;
-    flex-direction: row-reverse;
-    font-style: italic;
-}
-
-.car .price span {
-    text-align: right;
-    padding: 15px;
-    color: #f9f9f9;
-    background-color: #7e1a13;
-}
-
-.car .items {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-}
-
-.car .item {
-    margin: 5px 0;
-}
-
-.pagination {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    margin-right: 30px;
-    align-items: baseline;
-    font-weight: bold;
-}
-
-.pagination .page-item {
-    padding: 8px 15px;
-    color: #7e1a13;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .2);
-    font-weight: bold;
-}
-
-.pagination .pagination-items {
-    margin: 0 5px;
-}
-
-.pagination .page-item.active {
-    background-color: #7e1a13;
-    color: white;
-    box-shadow: none;
 }
 
 #map {
@@ -314,8 +212,8 @@ a.car {
 .form-item textarea {
     padding: 8px;
     border-radius: 2px;
-    border: 3px solid #eef3f7;
-    background-color: transparent;
+    border: none;
+    background-color: #fafbfc;
     margin-top: 5px;
     font-size: 18px;
     width: 100%;
