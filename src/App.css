@@ -12,6 +12,15 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #292929;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .content-wrapper {
     max-width: 1024px;
     min-width: 240px;
@@ -28,6 +37,9 @@ body {
 footer {
     margin: 0;
     padding: 1px 0 10px 0;
+    color: #727171;
+    text-align: center;
+    font-size: 13px;
 }
 
 header {
@@ -47,6 +59,10 @@ header h1 {
     font-size: 90px;
     line-height: 220px;
     text-align: center;
+}
+
+address {
+    font-style: normal;
 }
 
 .navigation-wrapper {
@@ -95,16 +111,19 @@ header h1 {
 }
 
 .navigation-wrapper nav ul li a:hover {
-    /* border-bottom: 2px solid #7e1a13; */
     text-decoration: underline;
     color: #7e1a13;
     transition: all 0.3s;
 }
 
-.info {
+header .info {
     display: flex;
     justify-content: space-between;
     font-size: 13px;
+}
+
+.page-contact .info {
+    margin-top: 25px;
 }
 
 .contact {
@@ -128,9 +147,17 @@ header h1 {
     margin-right: 55px;
 }
 
+.page-contact .opening-times {
+    margin: 25px 0 0 0;
+}
+
 .opening-times .row .day {
     min-width: 55px;
     display: inline-block;
+}
+
+.page-contact .row .day {
+    min-width: 75px;
 }
 
 .sticky {
@@ -174,11 +201,6 @@ footer {
 
 .page-cars {
     background-color: #fff;
-}
-
-#map {
-    width: 100%;
-    height: 600px;
 }
 
 .form-wrapper {
@@ -251,4 +273,24 @@ footer {
 
 .form-item ::placeholder {
     color: #a6a6a6;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-left {
+    width: 30%;
+}
+
+.page.page-map {
+    margin: 0;
+    padding: 0;
+    width: 70%;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
 }
