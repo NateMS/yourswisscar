@@ -43,8 +43,7 @@ footer {
 }
 
 header {
-    height: 70vh;
-    min-height: 500px;
+    height: 700px;
     margin: 0;
     padding: 45px 100px;
     background: url(data/header_bg.jpg) no-repeat center center fixed;
@@ -54,11 +53,21 @@ header {
     background-size: cover;
 }
 
-header h1 {
-    padding: 50px 0;
+header .image-text {
+    color: #f2f2f2;
+    text-shadow: #000 2px 2px 0;
+    height: 150%;
+    vertical-align: middle;
+    margin-top: 150px;
+}
+
+.image-text h1 {
     font-size: 90px;
-    line-height: 220px;
-    text-align: center;
+    margin: 0;
+}
+
+.image-text .subtitle {
+    font-size: 35px;
 }
 
 address {
@@ -79,6 +88,7 @@ address {
     background-color: transparent;
     transition: all 0.4s;
     z-index: 1;
+    text-shadow: rgb(194, 191, 191) 1px 1px 0;
 }
 
 .navigation-wrapper img {
@@ -94,15 +104,16 @@ address {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
 }
 
 .navigation-wrapper nav ul li {
     margin: 0 10px;
-    padding: 0 20px;
+    padding: 0 5px;
     width: auto;
     text-align: center;
+    justify-content: space-around;
     font-size: 26px;
 }
 
@@ -148,7 +159,6 @@ header .info {
 .opening-times {
     display: flex;
     flex-direction: column;
-    margin-right: 55px;
 }
 
 .page-contact .opening-times {
@@ -172,6 +182,7 @@ header .info {
     height: 90px;
     background-color: #fafbfc;
     box-shadow: 0 1px 10px 3px rgba(0, 0, 0, 0.15);
+    padding-right: 20px;
 }
 
 .sticky+.content-wrapper {
@@ -299,29 +310,43 @@ footer {
     height: 400px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-    .content-wrapper {
-        padding: 0 15px;
+@media only screen and (max-width: 1427px) {
+    header {
+        padding: 10px 20px 10px 0;
+    }
+}
+
+@media only screen and (max-width: 1243px) {
+    header .navigation-wrapper nav ul li {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1094px) {
+    header {
+        padding: 12px;
     }
     .navigation-wrapper .info {
         display: none;
     }
     .sticky {
-        height: 75px;
+        padding: 0;
     }
     .sticky .info {
         display: block;
         font-size: 8px;
     }
+}
+
+@media only screen and (min-width: 770px) and (max-width: 992px) {
+    .content-wrapper {
+        padding: 0 15px;
+    }
+    .sticky {
+        height: 75px;
+    }
     header {
         height: 400px;
-        min-height: 400px;
-        padding: 30px 50px;
-    }
-    header h1 {
-        padding: 30px 0;
-        font-size: 60px;
-        line-height: 130px;
     }
     .navigation-wrapper nav ul li {
         height: 75px;
@@ -330,12 +355,16 @@ footer {
         margin: 0 5px;
         padding: 0 8px;
     }
+    header .image-text {
+        margin-top: 40px;
+    }
+    header .image-text h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
 }
 
-@media only screen and (max-width: 767px) {
-    header h1 {
-        display: none;
-    }
+@media only screen and (max-width: 769px) {
     .content-wrapper {
         padding: 0 15px;
         z-index: 100;
@@ -347,9 +376,17 @@ footer {
         height: 70px;
     }
     header {
-        height: 250px;
-        min-height: 250px;
+        height: 300px;
+        min-height: 300px;
         padding: 0;
+    }
+    header .image-text {
+        margin: 0;
+        padding-top: 140px;
+    }
+    header .image-text h1 {
+        font-size: 50px;
+        line-height: 50px;
     }
     .mobile-nav {
         display: inline-block;
@@ -392,6 +429,7 @@ footer {
         cursor: pointer;
         opacity: 0;
         z-index: 2;
+        margin: -4px 0 0 -4px;
     }
     #menuToggle span {
         display: flex;
@@ -483,6 +521,20 @@ footer {
     }
     #menuToggle input:checked~nav {
         transform: none;
+    }
+}
+
+@media only screen and (max-width: 534px) {
+    header .image-text {
+        padding-top: 140px;
+    }
+    header .image-text h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    header .image-text .subtitle {
+        font-size: 24px;
+        line-height: 24px;
     }
 }
 

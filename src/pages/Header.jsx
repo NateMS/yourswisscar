@@ -47,8 +47,11 @@ class Header extends Component {
                     <Info></Info>
                 </div>
                 <div className="content-wrapper">
-                    <h1>Your SwissCar GmbH</h1>
-                </div>
+                    <div className="image-text">
+                        <h1>Your SwissCar GmbH</h1>
+                        <span class="subtitle">Ihr Fahrzeugpartner in Schlieren</span>
+                    </div>
+                   </div>
             </header>
         );
     }
