@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href=favicon.ico " />
+    <meta name="viewport " content="width=device-width, initial-scale=1 " />
+    <meta name="theme-color " content="#000000 " />
+    <meta name="description " content="Autohandel Your SwissCar GmbH - Ankauf, Verkauf " />
+    <link rel="apple-touch-icon " href="img/logo192.png " />
+    <link rel="stylesheet " href="style.css ">
+    <title>Your SwissCar GmbH</title>
+</head>
+
+<body>
+    <header className="App-header ">
+        <div className={`navigation-wrapper${ this.state.isTop ? '' : ' sticky'}`}>
+            <img src={logo} className="App-logo " alt="logo " />
+            <div class="mobile-nav ">
+                <div id="menuToggle ">
+                    <input type="checkbox "/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu ">
+                        <li><a href="# ">Home</a></li>
+                        <li><a href="#page-sales-form ">Ankauf</a></li>
+                        <li><a href="#page-cars ">Unser Angebot</a></li>
+                        <li><a href="#page-contact ">Kontakt</a></li>
+                    </ul>
+                </div>
+               
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="# ">Home</a></li>
+                    <li><a href="#page-sales-form ">Ankauf</a></li>
+                    <li><a href="#page-cars ">Unser Angebot</a></li>
+                    <li><a href="#page-contact ">Kontakt</a></li>
+                </ul>
+            </nav>
+            <Info></Info>
+        </div>
+        <div className="content-wrapper ">
+            <div className="image-text ">
+                <h1>Your SwissCar GmbH</h1>
+                <span class="subtitle ">Ihr Fahrzeugpartner in Schlieren</span>
+            </div>
+           </div>
+    </header>
+</body>
+
+</html>
