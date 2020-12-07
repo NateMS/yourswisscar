@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/yourswisscar/static/css/main.48a8c8e6.chunk.css",
-    "main.js": "/yourswisscar/static/js/main.7916b0be.chunk.js",
-    "main.js.map": "/yourswisscar/static/js/main.7916b0be.chunk.js.map",
-    "runtime-main.js": "/yourswisscar/static/js/runtime-main.f0284a68.js",
-    "runtime-main.js.map": "/yourswisscar/static/js/runtime-main.f0284a68.js.map",
-    "static/js/2.0043b24e.chunk.js": "/yourswisscar/static/js/2.0043b24e.chunk.js",
-    "static/js/2.0043b24e.chunk.js.map": "/yourswisscar/static/js/2.0043b24e.chunk.js.map",
-    "static/js/3.54f400b0.chunk.js": "/yourswisscar/static/js/3.54f400b0.chunk.js",
-    "static/js/3.54f400b0.chunk.js.map": "/yourswisscar/static/js/3.54f400b0.chunk.js.map",
+    "main.css": "/yourswisscar/static/css/main.2476c79e.chunk.css",
+    "main.js": "/yourswisscar/static/js/main.f674f6fc.chunk.js",
+    "main.js.map": "/yourswisscar/static/js/main.f674f6fc.chunk.js.map",
+    "runtime-main.js": "/yourswisscar/static/js/runtime-main.6a2ae04a.js",
+    "runtime-main.js.map": "/yourswisscar/static/js/runtime-main.6a2ae04a.js.map",
+    "static/js/2.d058798f.chunk.js": "/yourswisscar/static/js/2.d058798f.chunk.js",
+    "static/js/2.d058798f.chunk.js.map": "/yourswisscar/static/js/2.d058798f.chunk.js.map",
+    "static/js/3.19f4e973.chunk.js": "/yourswisscar/static/js/3.19f4e973.chunk.js",
+    "static/js/3.19f4e973.chunk.js.map": "/yourswisscar/static/js/3.19f4e973.chunk.js.map",
     "index.html": "/yourswisscar/index.html",
-    "static/css/main.48a8c8e6.chunk.css.map": "/yourswisscar/static/css/main.48a8c8e6.chunk.css.map",
-    "static/js/2.0043b24e.chunk.js.LICENSE.txt": "/yourswisscar/static/js/2.0043b24e.chunk.js.LICENSE.txt",
+    "static/css/main.2476c79e.chunk.css.map": "/yourswisscar/static/css/main.2476c79e.chunk.css.map",
+    "static/js/2.d058798f.chunk.js.LICENSE.txt": "/yourswisscar/static/js/2.d058798f.chunk.js.LICENSE.txt",
     "static/media/App.css": "/yourswisscar/static/media/header_bg.01c0ae34.jpg",
     "static/media/logo.87238be1.png": "/yourswisscar/static/media/logo.87238be1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f0284a68.js",
-    "static/js/2.0043b24e.chunk.js",
-    "static/css/main.48a8c8e6.chunk.css",
-    "static/js/main.7916b0be.chunk.js"
+    "static/js/runtime-main.6a2ae04a.js",
+    "static/js/2.d058798f.chunk.js",
+    "static/css/main.2476c79e.chunk.css",
+    "static/js/main.f674f6fc.chunk.js"
   ]
 }
