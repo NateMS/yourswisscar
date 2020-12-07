@@ -277,13 +277,20 @@ footer {
 }
 
 .submit {
-    color: #f9f9f9;
-    background-color: #7e1a13;
-    border: none;
+    color: #7e1a13;
+    background-color: transparent;
+    border: 1px solid #7e1a13;
+    border-radius: 2px;
     margin: 0;
     padding: 13px 28px;
     font-size: 18px;
     cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submit:hover {
+    color: #c6453b;
+    border-color: #c6453b;
 }
 
 .form-item ::placeholder {
