@@ -67,7 +67,7 @@ class SaleForm extends Component {
                                 </div>
                                 <div className="form-item">
                                     <label htmlFor="phone">Telefon</label>
-                                    <input type="phone" name="Telefon" placeholder="+41 xx xxx xx xx"/>
+                                    <input type="phone" name="Telefon" placeholder="+41 xx xxx xx xx" required/>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@ class SaleForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="submit">Anfrage Senden</button>
+                    <button type="submit" class="submit">Anfrage senden</button>
                     {status === "ERROR" && <p class="form-error">Ooops! Das Formular konnte leider nicht abgesendet werden. Versuchen Sie es bitte erneut oder senden Sie uns eine E-Mail.</p>}
                 </form>
             </div>

@@ -4,9 +4,15 @@ import Info from './Info';
 
 class Header extends Component {
     state = {
-        isTop: true
+        isTop: true,
+        isChecked: false,
     };
     
+    constructor(props) {
+        super(props);
+        this.onClick = this.onClick.bind(this);
+      }
+
     componentDidMount() {
         document.addEventListener('scroll', () => {
             const isTop = window.scrollY < 45;
@@ -16,33 +22,37 @@ class Header extends Component {
         });
     }
 
+    onClick(className) {
+        document.getElementById("nav-checkbox").checked = false;
+    }
+
     render() {
         return (
             <header className="App-header">
                 <div className={`navigation-wrapper${ this.state.isTop ? '' : ' sticky'}`}>
-                    <img src={logo} className="App-logo" alt="logo" />
+                    <a onClick={this.onClick} href="#"><img src={logo} className="App-logo" alt="logo" /></a>
                     <div class="mobile-nav">
                         <div id="menuToggle">
-                            <input type="checkbox"/>
+                            <input id="nav-checkbox" type="checkbox" />
                             <span></span>
                             <span></span>
                             <span></span>
                             <ul id="menu">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#page-sales-form">Ankauf</a></li>
-                                <li><a href="#page-cars">Unser Angebot</a></li>
-                                <li><a href="#page-contact">Kontakt</a></li>
+                                <li><a onClick={this.onClick} href="#">Home</a></li>
+                                <li><a onClick={this.onClick} href="#page-sales-form">Ankauf</a></li>
+                                <li><a onClick={this.onClick} href="#page-cars">Unser Angebot</a></li>
+                                <li><a onClick={this.onClick} href="#page-contact">Kontakt</a></li>
                             </ul>
                         </div>
                        
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#page-sales-form">Ankauf</a></li>
-                            <li><a href="#page-cars">Unser Angebot</a></li>
-                            <li><a href="#page-contact">Kontakt</a></li>
-                        </ul>
+                        <li><a onClick={this.onClick} href="#">Home</a></li>
+                        <li><a onClick={this.onClick} href="#page-sales-form">Ankauf</a></li>
+                        <li><a onClick={this.onClick} href="#page-cars">Unser Angebot</a></li>
+                        <li><a onClick={this.onClick} href="#page-contact">Kontakt</a></li>
+                    </ul>
                     </nav>
                     <Info></Info>
                 </div>
