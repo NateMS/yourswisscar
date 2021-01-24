@@ -33,8 +33,6 @@ class MapView extends Component {
             styleUrl: 'mapbox://styles/mapbox/light-v10',
             accessToken: process.env.REACT_APP_MAPBOX_KEY,
         });
-
-        console.log(process.env.REACT_MAPBOX_KEY)
         
         location.setStyle(iconStyle);
 
