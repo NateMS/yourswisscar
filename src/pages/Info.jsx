@@ -6,7 +6,7 @@ class Info extends Component {
       <div className="info">
         <div className="contact">
             <a href="tel:+4179 680 34 44">079 680 34 44</a>
-            <a href="mailto:info@yourswisscar.com">info@yourswisscar.com</a>
+            <a href="mailto:info@yourswisscar.ch">info@yourswisscar.ch</a>
         </div>
         <div className="opening-times">
             <span className="row">

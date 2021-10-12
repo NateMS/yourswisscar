@@ -1,2 +1,2 @@
 # yourswisscar
-website of yourswisscar.com
+website of yourswisscar.ch
