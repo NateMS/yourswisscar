@@ -48,9 +48,6 @@ header {
     margin: 0;
     padding: 45px 100px;
     background: url(data/header_bg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -88,7 +85,7 @@ address {
     justify-content: space-between;
     background-color: transparent;
     transition: all 0.4s;
-    z-index: 1;
+    z-index: 9999;
 }
 
 .navigation-wrapper img {
@@ -430,7 +427,7 @@ footer {
         display: block;
         top: 0;
         left: 0;
-        z-index: 50;
+        z-index: 9999;
         width: 100%;
         background-color: #fafbfc;
         box-shadow: 0 1px 10px 3px rgba(0, 0, 0, 0.15);
