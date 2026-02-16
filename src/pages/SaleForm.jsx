@@ -1,40 +1,33 @@
-import React, { Component } from 'react';
+import { useState } from 'react';
 
-class SaleForm extends Component {
-    constructor(props) {
-        super(props);
-        this.submitForm = this.submitForm.bind(this);
-        this.state = {
-            status: ""
-        };
-    }
+function SaleForm() {
+    const [status, setStatus] = useState("");
 
-    submitForm(ev) {
+    const submitForm = async (ev) => {
         ev.preventDefault();
         const form = ev.target;
         const data = new FormData(form);
-        const xhr = new XMLHttpRequest();
-        xhr.open(form.method, form.action);
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.onreadystatechange = () => {
-          if (xhr.readyState !== XMLHttpRequest.DONE) return;
-          if (xhr.status === 200) {
-            form.reset();
-            this.setState({ status: "SUCCESS" });
-          } else {
-            this.setState({ status: "ERROR" });
-          }
-        };
-        xhr.send(data);
-      }
-
-  render() {
-    const { status } = this.state;
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: { Accept: "application/json" },
+            });
+            if (response.ok) {
+                form.reset();
+                setStatus("SUCCESS");
+            } else {
+                setStatus("ERROR");
+            }
+        } catch {
+            setStatus("ERROR");
+        }
+    };
 
     if (status === "SUCCESS") {
         return (
             <div className="page page-sales-form">
-                <div id="page-sales-form" class="anchor"></div>
+                <div id="page-sales-form" className="anchor"></div>
                 <div className="content-wrapper">
                     <p className="form-success">Besten Dank für Ihre Anfrage! Wir werden die Anfrage so schnell wie möglich bearbeiten.</p>
                 </div>
@@ -44,11 +37,11 @@ class SaleForm extends Component {
 
     return (
         <div className="page page-sales-form">
-            <div id="page-sales-form" class="anchor"></div>
+            <div id="page-sales-form" className="anchor"></div>
             <div className="content-wrapper">
                 <h2>Ankauf</h2>
                 <p>Sie möchten Ihr Fahrzeug verkaufen? Füllen Sie dazu das Formular mit den Informationen über Ihr Fahrzeug aus.<br/>Wir melden uns bei Ihnen.</p>
-                <form action="https://formspree.io/f/mqkgdzle" method="POST" onSubmit={this.submitForm}>
+                <form action="https://formspree.io/f/mqkgdzle" method="POST" onSubmit={submitForm}>
                     <div className="form-wrapper">
                         <div className="form-fieldset">
                             <legend>Kontaktangaben</legend>
@@ -80,7 +73,7 @@ class SaleForm extends Component {
                                 </div>
                                 <div className="form-item">
                                     <label htmlFor="Modell">Modell</label>
-                                    <input type="text" name="Modell"  placeholder="z.B. Golf GTI" required/>
+                                    <input type="text" name="Modell" placeholder="z.B. Golf GTI" required/>
                                 </div>
                                 <div className="form-item">
                                     <label htmlFor="Kilometerstand">Kilometerstand</label>
@@ -103,13 +96,12 @@ class SaleForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="submit">Anfrage senden</button>
-                    {status === "ERROR" && <p class="form-error">Ooops! Das Formular konnte leider nicht abgesendet werden. Versuchen Sie es bitte erneut oder senden Sie uns eine E-Mail.</p>}
+                    <button type="submit" className="submit">Anfrage senden</button>
+                    {status === "ERROR" && <p className="form-error">Ooops! Das Formular konnte leider nicht abgesendet werden. Versuchen Sie es bitte erneut oder senden Sie uns eine E-Mail.</p>}
                 </form>
             </div>
         </div>
     );
-  }
 }
 
 export default SaleForm;
